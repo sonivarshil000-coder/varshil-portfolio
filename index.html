@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Varshil Soni — AI & Data Analytics portfolio">
+<meta name="theme-color" content="#07080c">
+<title>Varshil Soni | AI & Data Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080c;--panel:rgba(255,255,255,.045);--text:#f7f8fb;--muted:#9da7b7;--line:rgba(255,255,255,.10);--a:#9b7cff;--b:#49e6ff;--good:#5eead4;--r:24px;--mx:50%;--my:30%}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-5;background:radial-gradient(circle at 15% 12%,rgba(155,124,255,.17),transparent 28%),radial-gradient(circle at 88% 30%,rgba(73,230,255,.10),transparent 26%),linear-gradient(180deg,#07080c,#090b10 55%,#07080c)}
+body:after{content:"";position:fixed;inset:0;z-index:-4;pointer-events:none;background:radial-gradient(320px circle at var(--mx) var(--my),rgba(73,230,255,.08),transparent 65%);transition:background .15s ease}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:100;box-shadow:0 0 18px rgba(73,230,255,.55)}
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1050px,92%);z-index:90;display:flex;justify-content:space-between;align-items:center;padding:10px 12px 10px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(9,11,16,.70);backdrop-filter:blur(22px);box-shadow:0 12px 50px rgba(0,0,0,.22)}
+.logo{font:700 18px "Space Grotesk";letter-spacing:-.04em}.logo span{color:var(--b)}
+.navlinks{display:flex;gap:3px}.navlinks a{padding:9px 13px;border-radius:999px;color:#c9d1dc;font-size:13px;transition:.2s}.navlinks a:hover,.navlinks a.active{background:rgba(255,255,255,.10);color:#fff}
+.menu{display:none;background:none;color:#fff;border:1px solid var(--line);border-radius:50%;width:40px;height:40px;cursor:pointer}
+.hero{min-height:100vh;display:grid;place-items:center;padding:145px 0 90px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:60px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid var(--line);border-radius:99px;color:#cbd4df;font-size:12px;background:rgba(255,255,255,.025)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 16px var(--good)}
+h1{font:700 clamp(54px,8vw,94px)/.9 "Space Grotesk";letter-spacing:-.075em;margin-top:22px}
+.gradient{background:linear-gradient(110deg,#fff,#c4b5fd,#67e8f9);background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:680px;margin:26px 0}
+.type-line{min-height:28px;color:#cdd6e1;font:600 15px "Space Grotesk";margin-top:18px}
+.type-line span{color:var(--b)}.caret{display:inline-block;width:7px;height:1em;background:var(--b);vertical-align:-2px;margin-left:3px;animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:14px;border:1px solid var(--line);font-weight:600;font-size:14px;transition:transform .18s ease,background .18s ease,border-color .18s ease;will-change:transform}
+.primary{background:#fff;color:#07080b}.primary:hover{background:#e9faff}.ghost:hover{background:rgba(139,92,246,.10);border-color:rgba(155,124,255,.45)}
+.magnetic{transition:transform .12s ease}
+.hero-card,.panel{border:1px solid var(--line);background:var(--panel);border-radius:var(--r);backdrop-filter:blur(14px)}
+.hero-card{padding:18px;box-shadow:0 30px 100px rgba(0,0,0,.45);transition:transform .15s;overflow:hidden;transform-style:preserve-3d}
+.profile-wrap{position:relative;border-radius:20px;overflow:hidden;margin:0 auto 18px;aspect-ratio:4/4.5;background:#0b0d12;border:1px solid rgba(255,255,255,.08)}
+.profile-wrap:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 180deg,transparent,var(--a),transparent,var(--b),transparent);opacity:.18;animation:spin 8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.profile-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(6,7,10,.78) 100%);pointer-events:none}
+.profile-photo{position:relative;z-index:1;width:100%;height:100%;display:block;object-fit:cover;object-position:53% 26%;filter:saturate(.92) contrast(1.03);transition:transform .5s ease,filter .3s ease}
+.hero-card:hover .profile-photo{transform:scale(1.045);filter:saturate(1.02) contrast(1.04)}
+.profile-badge{position:absolute;left:14px;bottom:13px;z-index:2;padding:8px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(6,7,10,.62);backdrop-filter:blur(12px);font-size:11px;color:#eef3f8}.profile-badge span{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 12px var(--good);margin-right:6px}
+.card-line{display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid var(--line);font-size:13px;color:#c7d0db}.card-line b{color:#fff}
+.float-chip{position:absolute;padding:8px 10px;border:1px solid var(--line);background:rgba(10,12,17,.72);backdrop-filter:blur(12px);border-radius:12px;font-size:11px;color:#dce5ef;animation:float 4s ease-in-out infinite}.fc1{right:-8px;top:14%}.fc2{left:-12px;top:58%;animation-delay:-1.5s}.fc3{right:12px;bottom:7%;animation-delay:-2.7s}@keyframes float{50%{transform:translateY(-8px)}}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}
+.kicker{color:var(--b);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.section-title{font:600 clamp(35px,5vw,58px)/1 "Space Grotesk";letter-spacing:-.055em;margin-top:7px}.section-copy{color:var(--muted);max-width:480px;line-height:1.7}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.panel{padding:28px}.about-big{font:500 26px/1.35 "Space Grotesk"}.muted{color:var(--muted);line-height:1.8;margin-top:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{padding:18px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}.stat strong{display:block;font:700 27px "Space Grotesk"}.stat span{font-size:11px;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:10px 13px;border:1px solid var(--line);border-radius:99px;color:#d9e1eb;font-size:13px;transition:.2s;cursor:pointer;background:transparent}.chip:hover,.chip.on{border-color:rgba(73,230,255,.55);background:rgba(73,230,255,.07);transform:translateY(-2px)}
+.skill-note{margin-top:18px;color:var(--muted);font-size:13px;min-height:20px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project{min-height:300px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;cursor:pointer;transition:transform .25s,border-color .25s,background .25s}.project:before{content:"";position:absolute;width:190px;height:190px;right:-90px;top:-90px;border-radius:50%;background:var(--glow);filter:blur(20px);transition:.3s}.project:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.065)}.project:hover:before{transform:scale(1.4)}
+.project>*{position:relative}.project-top{display:flex;justify-content:space-between;color:#aeb9c8;font-size:12px}.tag{padding:6px 9px;border:1px solid var(--line);border-radius:99px}.project h3{font:600 27px "Space Grotesk";letter-spacing:-.04em;margin:18px 0 10px}.project p{color:var(--muted);line-height:1.65;font-size:14px}.project-foot{display:flex;gap:7px;flex-wrap:wrap}.project-foot span{font-size:11px;color:#bac5d3;background:rgba(255,255,255,.05);padding:6px 8px;border-radius:8px}
+.project-action{display:inline-flex;margin-top:14px;color:#dffaff;font-size:12px;font-weight:700}
+.timeline{display:grid;gap:18px}.edu{display:grid;grid-template-columns:150px 1fr;gap:25px}.year{color:var(--b);font:600 13px "Space Grotesk"}.edu h3{font:600 21px "Space Grotesk";margin-bottom:7px}.edu p{color:var(--muted);line-height:1.7;font-size:14px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contact-box{min-height:220px;display:flex;flex-direction:column;justify-content:space-between}.contact-box h3{font:600 30px "Space Grotesk";letter-spacing:-.04em}.contact-links{display:grid;gap:9px}.contact-links a{padding:13px 14px;border:1px solid var(--line);border-radius:13px;color:#ccd5df;transition:.2s}.contact-links a:hover{background:#fff;color:#090a0d}
+footer{padding:30px 0 50px;color:#687383;font-size:12px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}
+.modal{position:fixed;inset:0;z-index:120;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(10px)}.modal.open{display:grid}.modal-card{width:min(650px,94%);border:1px solid var(--line);border-radius:24px;background:#0d1016;padding:28px;box-shadow:0 40px 120px rgba(0,0,0,.6);animation:pop .22s ease}@keyframes pop{from{opacity:0;transform:scale(.96) translateY(10px)}to{opacity:1;transform:none}}
+.modal-head{display:flex;justify-content:space-between;gap:15px;align-items:start}.modal h3{font:600 32px "Space Grotesk";letter-spacing:-.04em}.close{border:1px solid var(--line);background:transparent;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer}.modal p{color:var(--muted);line-height:1.75;margin:16px 0}.modal-tags{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.modal-tags span{padding:7px 9px;border-radius:8px;background:rgba(255,255,255,.06);font-size:11px;color:#cbd6e2}
+#top{position:fixed;right:22px;bottom:22px;z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(10,12,17,.72);color:#fff;backdrop-filter:blur(12px);cursor:pointer;opacity:0;transform:translateY(12px);transition:.25s}#top.show{opacity:1;transform:none}
+@media(max-width:800px){.navlinks{display:none;position:absolute;top:65px;left:0;right:0;padding:10px;background:#0b0e13;border:1px solid var(--line);border-radius:20px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.hero-grid,.about,.contact{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:14px}.edu{grid-template-columns:1fr;gap:6px}.float-chip{display:none}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}.panel{padding:21px}.hero-card{padding:14px}.profile-wrap{border-radius:17px}h1{font-size:54px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.float-chip,.profile-wrap:before{animation:none}.btn,.project,.chip{transition:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav class="nav" aria-label="Primary navigation">
+<a class="logo" href="#home">VS<span>.</span></a>
+<div class="navlinks" id="navlinks">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</div>
+<button class="menu" id="menu" type="button" aria-label="Open menu">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="reveal">
+<div class="eyebrow"><span class="dot"></span> AI & Data Analytics · Research-minded Builder</div>
+<h1>Building with <span class="gradient">curiosity.</span></h1>
+<p>I’m Varshil Soni, a BCA student exploring Artificial Intelligence, Machine Learning, Generative AI and data-driven systems — turning ideas into useful prototypes.</p>
+<div class="type-line">Currently exploring: <span id="typed"></span><i class="caret"></i></div>
+<div class="cta">
+<a class="btn primary magnetic" href="#projects">Explore my work ↗</a>
+<a class="btn ghost magnetic" href="#contact">Let's connect</a>
+</div>
+</div>
+
+<div class="hero-card reveal" id="tilt">
+<div class="profile-wrap">
+<img class="profile-photo" src="assets/varshil-soni.jpg" alt="Varshil Soni">
+<div class="profile-badge"><span></span>AI & Data Analytics</div>
+</div>
+<div class="float-chip fc1">GenAI</div><div class="float-chip fc2">Python</div><div class="float-chip fc3">ML · Analytics</div>
+<div class="card-line"><span>Based in</span><b>Surat, India</b></div>
+<div class="card-line"><span>Degree</span><b>BCA · AI & DA</b></div>
+<div class="card-line"><span>CGPA</span><b>7.98 / 10</b></div>
+<div class="card-line"><span>Graduation</span><b>April 2027</b></div>
+</div>
+</div>
+</section>
+
+<section id="about"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">01 · About</div><h2 class="section-title">A learner who likes to build.</h2></div><p class="section-copy">My focus sits between AI concepts and practical applications: understanding a problem, prototyping a solution, and learning from the results.</p></div>
+<div class="about">
+<div class="panel reveal"><div class="about-big">“The interesting part of AI isn't only making a model work — it's understanding why it works, where it fails, and how to improve it.”</div></div>
+<div class="panel reveal"><p class="muted">I’m currently pursuing a BCA in Artificial Intelligence & Data Analytics at SDJ International College, Surat. My academic exposure includes AI, machine learning, statistics, data analytics, programming and data structures. Outside coursework, I build AI-oriented projects and experiment with modern developer tools.</p>
+<div class="stats"><div class="stat"><strong>7.98</strong><span>Current CGPA / 10</span></div><div class="stat"><strong>2027</strong><span>Expected graduation</span></div><div class="stat"><strong>AI</strong><span>Core interest</span></div></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">02 · Toolkit</div><h2 class="section-title">Things I work with.</h2></div><p class="section-copy">Click a skill to highlight it. The toolkit spans programming, analytics, machine learning, GenAI and application development.</p></div>
+<div class="panel reveal"><div class="skills" id="skillsList">
+<span class="chip" data-note="Core programming language used across projects.">Python</span>
+<span class="chip" data-note="Supervised and practical ML workflows.">Machine Learning</span>
+<span class="chip" data-note="LLM-powered applications and workflows.">Generative AI</span>
+<span class="chip" data-note="Tabular data manipulation and analysis.">Pandas</span>
+<span class="chip" data-note="Numerical computing and arrays.">NumPy</span>
+<span class="chip" data-note="ML algorithms and experimentation.">scikit-learn</span>
+<span class="chip" data-note="Statistical analysis and data work.">R</span>
+<span class="chip" data-note="Rapid interactive AI/data prototypes.">Streamlit</span>
+<span class="chip" data-note="Python web application development.">Flask</span>
+<span class="chip" data-note="Dashboards and business analytics.">Power BI</span>
+<span class="chip" data-note="Spreadsheet-based analysis and workflows.">Excel</span>
+<span class="chip" data-note="Version control and project collaboration.">Git & GitHub</span>
+<span class="chip" data-note="Cloud notebook environment for experiments.">Google Colab</span>
+<span class="chip" data-note="Generative AI experimentation and prototyping.">Google AI Studio</span>
+<span class="chip" data-note="Designing effective instructions for LLMs.">Prompt Engineering</span>
+<span class="chip" data-note="Exploration, cleaning and interpretation of data.">Data Analytics</span>
+<span class="chip" data-note="Exploratory analysis before modeling.">EDA</span>
+<span class="chip" data-note="Object-oriented programming and academic work.">Java</span>
+</div><div class="skill-note" id="skillNote">Select a skill to see how it fits into my toolkit.</div></div>
+</div></section>
+
+<section id="projects"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">03 · Selected work</div><h2 class="section-title">Projects with a purpose.</h2></div><p class="section-copy">Click any project to open a quick research-style overview.</p></div>
+<div class="projects">
+<article class="panel project reveal" data-project="chefmate" style="--glow:rgba(139,92,246,.28)"><div><div class="project-top"><span class="tag">AI · GenAI</span><span>01</span></div><h3>ChefMate AI</h3><p>An interactive AI cooking assistant that uses user preferences to generate personalized recipe suggestions and structured practical responses.</p><span class="project-action">View details →</span></div><div class="project-foot"><span>Python</span><span>Streamlit</span><span>Generative AI</span></div></article>
+<article class="panel project reveal" data-project="yatra" style="--glow:rgba(34,211,238,.22)"><div><div class="project-top"><span class="tag">Travel · Automation</span><span>02</span></div><h3>Yatra</h3><p>A travel application concept for itinerary generation, tourist discovery, budgets and booking-oriented workflows, with an emphasis on interactive UX.</p><span class="project-action">View details →</span></div><div class="project-foot"><span>FastAPI</span><span>Gemini</span><span>JavaScript</span></div></article>
+<article class="panel project reveal" data-project="logistics" style="--glow:rgba(94,234,212,.18)"><div><div class="project-top"><span class="tag">AI · Analytics</span><span>03</span></div><h3>Logistics Risk System</h3><p>An AI-driven project concept for analysing shipment and demand information and identifying potential delivery risks for operational planning.</p><span class="project-action">View details →</span></div><div class="project-foot"><span>Python</span><span>Data Analysis</span><span>ML</span></div></article>
+<article class="panel project reveal" data-project="negotiation" style="--glow:rgba(244,114,182,.18)"><div><div class="project-top"><span class="tag">AI · Decision Support</span><span>04</span></div><h3>Negotiation & Conflict Resolution</h3><p>An AI concept that analyses conflicting interests, compares resolution strategies and presents structured information for decision support.</p><span class="project-action">View details →</span></div><div class="project-foot"><span>AI</span><span>Prompting</span><span>Structured Output</span></div></article>
+</div></div></section>
+
+<section id="education"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">04 · Education</div><h2 class="section-title">Learning in progress.</h2></div></div>
+<div class="timeline panel reveal">
+<div class="edu"><div class="year">2024 — 2027</div><div><h3>BCA — Artificial Intelligence & Data Analytics</h3><p><b>SDJ International College, Surat</b><br>Third Year · Semester 5 · Current CGPA 7.98/10 · Expected graduation April 2027.</p></div></div>
+<div class="edu"><div class="year">FOCUS</div><div><h3>Research interests</h3><p>Artificial Intelligence · Machine Learning · Generative AI · Data Analytics · Conversational Systems · Data-driven Decision Support.</p></div></div>
+</div></div></section>
+
+<section id="contact"><div class="container">
+<div class="section-head reveal"><div><div class="kicker">05 · Contact</div><h2 class="section-title">Let's build something.</h2></div></div>
+<div class="contact">
+<div class="panel contact-box reveal"><div><h3>Have a project, internship or research opportunity?</h3><p class="muted">I’m open to conversations around AI, data analytics, research internships and interesting technical projects.</p></div><a class="btn primary magnetic" href="mailto:varshilsoni2006@gmail.com">Email me ↗</a></div>
+<div class="panel contact-links reveal"><a href="mailto:varshilsoni2006@gmail.com">✉ &nbsp; varshilsoni2006@gmail.com</a><a href="https://github.com/sonivarshil000-coder" target="_blank" rel="noopener">⌘ &nbsp; GitHub</a><a href="https://linkedin.com/in/varshil-soni-207585352" target="_blank" rel="noopener">in &nbsp; LinkedIn</a></div>
+</div></div></section>
+</main>
+
+<footer class="container"><span>© 2026 Varshil Soni</span><span>Built with curiosity · AI & Data Analytics</span></footer>
+
+<button id="top" type="button" aria-label="Back to top">↑</button>
+
+<div class="modal" id="modal" aria-hidden="true">
+<div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-head"><div><div class="kicker" id="modalKicker"></div><h3 id="modalTitle"></h3></div><button class="close" id="closeModal" type="button" aria-label="Close">×</button></div>
+<p id="modalText"></p><div class="modal-tags" id="modalTags"></div>
+<a class="btn primary" id="modalLink" href="#" target="_blank" rel="noopener">Open project ↗</a>
+</div></div>
+
+<script>
+(() => {
+const nav=document.getElementById("navlinks"),menu=document.getElementById("menu");
+menu.addEventListener("click",()=>nav.classList.toggle("open"));
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+
+const progress=document.getElementById("progress"),topBtn=document.getElementById("top");
+const updateScroll=()=>{
+ const h=document.documentElement.scrollHeight-innerHeight;
+ progress.style.width=(h>0?(scrollY/h)*100:0)+"%";
+ topBtn.classList.toggle("show",scrollY>650);
+};
+addEventListener("scroll",updateScroll,{passive:true}); updateScroll();
+topBtn.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+
+const sections=[...document.querySelectorAll("main section[id]")], links=[...nav.querySelectorAll("a")];
+const sectionObs=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+entry.target.id));}});
+},{rootMargin:"-35% 0px -55% 0px",threshold:0});
+sections.forEach(s=>sectionObs.observe(s));
+
+const revealObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>revealObs.observe(x));
+
+const words=["Generative AI","Machine Learning","Data Analytics","AI Applications","Research Projects"];
+const typed=document.getElementById("typed"); let wi=0,ci=0,deleting=false;
+function type(){
+ const w=words[wi];
+ typed.textContent=w.slice(0,ci);
+ if(!deleting && ci<w.length){ci++;setTimeout(type,70)}
+ else if(!deleting){deleting=true;setTimeout(type,1200)}
+ else if(ci>0){ci--;setTimeout(type,38)}
+ else{deleting=false;wi=(wi+1)%words.length;setTimeout(type,300)}
+}
+type();
+
+const tilt=document.getElementById("tilt");
+if(matchMedia("(pointer:fine)").matches){
+ addEventListener("pointermove",e=>{
+   document.documentElement.style.setProperty("--mx",e.clientX+"px");
+   document.documentElement.style.setProperty("--my",e.clientY+"px");
+   const r=tilt.getBoundingClientRect();
+   if(e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom){
+     const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+     tilt.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`;
+   }else tilt.style.transform="";
+ },{passive:true});
+}
+document.querySelectorAll(".magnetic").forEach(btn=>{
+ btn.addEventListener("pointermove",e=>{
+   const r=btn.getBoundingClientRect(),x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);
+   btn.style.transform=`translate(${x*.10}px,${y*.10}px)`;
+ });
+ btn.addEventListener("pointerleave",()=>btn.style.transform="");
+});
+
+const skillNote=document.getElementById("skillNote");
+document.querySelectorAll(".chip").forEach(chip=>chip.addEventListener("click",()=>{
+ document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
+ chip.classList.add("on"); skillNote.textContent=chip.dataset.note;
+}));
+
+const projectData={
+ chefmate:{k:"AI · GenAI",t:"ChefMate AI",text:"An interactive AI cooking assistant built around personalized recipe generation and structured practical responses. The project explores how user preferences can shape a useful conversational experience.",tags:["Python","Streamlit","Generative AI"],url:"#projects"},
+ yatra:{k:"Travel · Automation",t:"Yatra",text:"A travel application concept focused on itinerary generation, tourist discovery, budgets and booking-oriented workflows. The goal is a differentiated interactive travel experience rather than a static listing app.",tags:["FastAPI","Gemini","JavaScript"],url:"#projects"},
+ logistics:{k:"AI · Analytics",t:"AI Logistics Demand & Delivery Risk System",text:"A data-oriented system concept for analysing demand and shipment information and surfacing potential delivery risks to support operational planning and decision-making.",tags:["Python","Data Analysis","Machine Learning"],url:"https://github.com/sonivarshil000-coder/AI-Logistic-Demand-and-Risk-analysis"},
+ negotiation:{k:"AI · Decision Support",t:"AI Negotiation & Conflict Resolution",text:"An AI decision-support concept that structures conflicting interests, compares possible resolution strategies and presents information in a way that helps users reason through a negotiation.",tags:["AI","Prompting","Structured Output"],url:"https://github.com/sonivarshil000-coder/AI_Negotiation_Conflict_Resolution"}
+};
+const modal=document.getElementById("modal"),title=document.getElementById("modalTitle"),kicker=document.getElementById("modalKicker"),text=document.getElementById("modalText"),tags=document.getElementById("modalTags"),link=document.getElementById("modalLink");
+function openProject(key){
+ const p=projectData[key]; if(!p)return;
+ kicker.textContent=p.k; title.textContent=p.t; text.textContent=p.text;
+ tags.innerHTML=p.tags.map(t=>`<span>${t}</span>`).join("");
+ link.href=p.url;
+ link.style.display=p.url.startsWith("http")?"inline-flex":"none";
+ modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden";
+}
+document.querySelectorAll(".project").forEach(p=>p.addEventListener("click",()=>openProject(p.dataset.project)));
+document.getElementById("closeModal").addEventListener("click",()=>{modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""});
+modal.addEventListener("click",e=>{if(e.target===modal)document.getElementById("closeModal").click()});
+addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))document.getElementById("closeModal").click()});
+})();
+</script>
+</body>
+</html>
